@@ -1,0 +1,43 @@
+{
+    "group": "Plugins",
+    "libs": [
+        "libsqlite3.0.dylib:weak",
+        "libz.1.2.5.dylib",
+	"libxml2.dylib"
+    ],
+    "frameworks": [
+        "Accounts.framework:weak",
+        "AdSupport.framework:weak",
+        "Social.framework:weak",
+        "Security.framework:weak",
+        "CoreTelephony.framework:weak",
+        "MobileCoreServices.framework:weak",
+        "WebKit.framework:weak",
+        "EventKitUI.framework",
+        "StoreKit.framework",
+        "MessageUI.framework"
+    ],
+    "headerpaths": [
+        "../Facebook/Scripts"
+    ],                    
+    "files": [
+        "../../Plugins/iOS/__vungle.db",
+        "../../Facebook/Scripts/NativeDialogModes.cs",
+        "../../Plugins/iOS/AEPriceMatrix.plist"
+    ],
+    "folders": [],
+    "excludes": [
+        "^.*.DS_Store$",
+        "^.*.meta$",
+        "^.*.mdown^",
+        "^.*.pdf$",
+        "^.*.svn$"
+    ],
+    "buildSettings": {
+        "ENABLE_BITCODE" : "NO", 
+    	"OTHER_LDFLAGS" : [
+            "-ObjC",
+            "-all_load"
+            ]
+    }
+}
